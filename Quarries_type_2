@@ -1,0 +1,44 @@
+CREATE DATABASE Raju_PROJECT_SQL;
+USE Raju_PROJECT_SQL;
+
+CREATE TABLE RAJU_ASS_PRJ (
+    Country_Region VARCHAR(20),
+    Confirmed INT,
+    Deaths INT,
+    Recovered INT,
+    Active INT,
+    New_cases INT,
+    New_deaths INT,
+    New_recovered INT,
+    Deaths_100Cases DECIMAL,
+    Recovered_100Cases DECIMAL,
+    Deaths_100Recovered DECIMAL,
+    Confirmed_lastweek INT,
+    ONEweek_change INT,
+    ONEweek_PER_increase DECIMAL,
+    WHO_Region VARCHAR(20)
+);
+
+-- Verify table creation
+SELECT * FROM RAJU_ASS_PRJ;
+
+-- Load data from CSV
+LOAD DATA INFILE 'C:/Users/sanju/Downloads/country_wise_latest.csv'
+INTO TABLE RAJU_ASS_PRJ
+FIELDS TERMINATED BY ','         -- Field separator (comma for CSV files)
+ENCLOSED BY '"'                  -- Optional, if fields are enclosed by double quotes
+LINES TERMINATED BY '\n'         -- Row separator (newline)
+IGNORE 1 ROWS;                   -- Skip the header row
+
+-- Count total records
+SELECT COUNT(*) AS Total_Records FROM RAJU_ASS_PRJ;
+
+-- Sum of confirmed cases
+SELECT SUM(Confirmed) AS Total_Confirmed FROM RAJU_ASS_PRJ;
+
+-- Average of confirmed cases
+SELECT AVG(Confirmed) AS Average_Confirmed FROM RAJU_ASS_PRJ;
+
+-- Filter rows with Confirmed cases greater than 1000
+SELECT * FROM RAJU_ASS_PRJ
+WHERE Confirmed > 1000;
