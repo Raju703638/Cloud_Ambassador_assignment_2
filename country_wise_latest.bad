@@ -1,0 +1,6 @@
+country_region,confirmed,deaths,recovered,active,new_cases,new_deaths,new_recovered,deaths_per_100_cases,recovered_per_100_cases,deaths_per_100_recovered,confirmed_last_week,week_change,week_percent_increase,who_region
+Canada,116458,8944,0,107514,682,11,0,7.68,0,inf,112925,3533,3.13,Americas
+Mozambique,1701,11,0,1690,32,0,0,0.65,0,inf,1507,194,12.87,Africa
+Serbia,24141,543,0,23598,411,9,0,2.25,0,inf,21253,2888,13.59,Europe
+Sweden,79395,5700,0,73695,398,3,0,7.18,0,inf,78048,1347,1.73,Europe
+Syria,674,40,0,634,24,2,0,5.93,0,inf,522,152,29.12,Eastern Mediterranean
