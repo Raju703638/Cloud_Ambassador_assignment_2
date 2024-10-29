@@ -1,0 +1,14 @@
+SELECT * FROM test.covid.data;
+
+-- Count total records
+SELECT COUNT(*) AS Total_Records FROM test.covid.data;
+
+-- Sum of confirmed cases
+SELECT SUM(Confirmed) AS Total_Confirmed FROM test.covid.data;
+
+-- Average of confirmed cases
+SELECT AVG(Confirmed) AS Average_Confirmed FROM test.covid.data;
+
+-- Filter rows with Confirmed cases greater than 1000
+SELECT * FROM test.covid.data
+WHERE Confirmed > 1000;
